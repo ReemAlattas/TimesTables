@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 20
+        return 10
         
     }
     
@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate {
         
         let timesTable = Int(sliderValue.value * 20)
         
-        cell.textLabel?.text = String(timesTable * (indexPath.row + 1))
+        cell.textLabel?.text = "\(timesTable) x \(indexPath.row + 1) = \(timesTable * (indexPath.row + 1))"
         
         return cell
         
